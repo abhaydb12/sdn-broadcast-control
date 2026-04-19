@@ -1,0 +1,164 @@
+loading app naive_flood_controller.py
+loading app ryu.controller.ofp_handler
+instantiating app naive_flood_controller.py of NaiveFloodController
+=== Naive Flood Controller Started (BEFORE scenario) ===
+instantiating app ryu.controller.ofp_handler of OFPHandler
+BRICK NaiveFloodController
+  CONSUMES EventOFPPacketIn
+  CONSUMES EventOFPSwitchFeatures
+BRICK ofp_event
+  PROVIDES EventOFPPacketIn TO {'NaiveFloodController': {'main'}}
+  PROVIDES EventOFPSwitchFeatures TO {'NaiveFloodController': {'config'}}
+  CONSUMES EventOFPEchoReply
+  CONSUMES EventOFPEchoRequest
+  CONSUMES EventOFPErrorMsg
+  CONSUMES EventOFPHello
+  CONSUMES EventOFPPortDescStatsReply
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPSwitchFeatures
+connected socket:<eventlet.greenio.base.GreenSocket object at 0xffff97ac44c0> address:('127.0.0.1', 49234)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0xffff97b35fa0>
+move onto config mode
+EVENT ofp_event->NaiveFloodController EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x56bbf214,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=1,n_buffers=0,n_tables=254)
+move onto main mode
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #1 Src=00:00:00:00:00:02 Dst=33:33:00:00:00:02 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #2 Src=00:00:00:00:00:03 Dst=33:33:00:00:00:02 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #3 Src=00:00:00:00:00:01 Dst=ff:ff:ff:ff:ff:ff In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #4 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #5 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #6 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #7 Src=00:00:00:00:00:01 Dst=ff:ff:ff:ff:ff:ff In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #8 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:01 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #9 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:03 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #10 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:01 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #11 Src=00:00:00:00:00:01 Dst=ff:ff:ff:ff:ff:ff In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #12 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:01 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #13 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:04 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #14 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:01 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #15 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #16 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #17 Src=00:00:00:00:00:02 Dst=ff:ff:ff:ff:ff:ff In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #18 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:02 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #19 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:03 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #20 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:02 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #21 Src=00:00:00:00:00:02 Dst=ff:ff:ff:ff:ff:ff In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #22 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:02 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #23 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:04 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #24 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:02 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #25 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:01 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #26 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:03 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #27 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:02 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #28 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:03 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #29 Src=00:00:00:00:00:03 Dst=ff:ff:ff:ff:ff:ff In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #30 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:03 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #31 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:04 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #32 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:03 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #33 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:01 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #34 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:04 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #35 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:02 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #36 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:04 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #37 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:03 In-Port=4 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #38 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:04 In-Port=3 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #39 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:03 In-Port=4 — flooding all ports
+[FLOOD] #40 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:02 In-Port=4 — flooding all ports
+[FLOOD] #41 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:02 In-Port=3 — flooding all ports
+[FLOOD] #42 Src=00:00:00:00:00:04 Dst=00:00:00:00:00:01 In-Port=4 — flooding all ports
+[FLOOD] #43 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:01 In-Port=3 — flooding all ports
+[FLOOD] #44 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #45 Src=00:00:00:00:00:03 Dst=00:00:00:00:00:04 In-Port=3 — flooding all ports
+[FLOOD] #46 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:04 In-Port=2 — flooding all ports
+[FLOOD] #47 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:03 In-Port=2 — flooding all ports
+[FLOOD] #48 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:04 In-Port=1 — flooding all ports
+[FLOOD] #49 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:03 In-Port=1 — flooding all ports
+[FLOOD] #50 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #51 Src=00:00:00:00:00:01 Dst=ff:ff:ff:ff:ff:ff In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #52 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #53 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #54 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #55 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #56 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #57 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #58 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #59 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #60 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #61 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #62 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #63 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #64 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #65 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #66 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #67 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #68 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #69 Src=00:00:00:00:00:01 Dst=00:00:00:00:00:02 In-Port=1 — flooding all ports
+EVENT ofp_event->NaiveFloodController EventOFPPacketIn
+[FLOOD] #70 Src=00:00:00:00:00:02 Dst=00:00:00:00:00:01 In-Port=2 — flooding all ports
